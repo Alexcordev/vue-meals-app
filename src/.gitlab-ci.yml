@@ -1,0 +1,14 @@
+image: node:10.20.1-jessie
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - node --version
+  - npm --version
+  - npm clean-install
+
+test_unit:
+  script:
+    - npm run test:unit
